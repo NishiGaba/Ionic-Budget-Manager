@@ -11,7 +11,7 @@
 
 <ion-content padding>
   	<ion-list>
-	  <button ion-item *ngFor="let expense of expenses" (click)="expenseSelected(expense)">
+	  <button ion-item *ngFor="let expense of expenses" (click)="expenseTapped($event, expense)">
 	    {{ expense.title }} 
 	  </button> 
 	</ion-list>

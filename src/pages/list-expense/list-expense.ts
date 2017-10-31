@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { DataProvider } from '../../providers/data/data';
-
+import { UpdateExpensePage } from '../update-expense/update-expense';
 /**
  * Generated class for the ListExpensePage page.
  *
@@ -28,7 +28,15 @@ export class ListExpensePage {
 	        console.log(expenses);
 	      }
 	    });
-  }
+  	}
+
+
+  	expenseTapped(event, expense) {
+	    this.navCtrl.push(UpdateExpensePage, {
+	      expense: expense
+	    });
+	    console.log(this.navCtrl);
+	  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListExpensePage');

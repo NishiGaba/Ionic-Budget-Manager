@@ -1,18 +1,19 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button icon-only menuToggle>
+    <button menuToggle *ngIf="!selectedExpense">
       <ion-icon name="menu"></ion-icon> 
     </button>
     <ion-title>
-      {{title}}
+      Update Expense
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-card>
-    <ion-card-content>
-      {{amount}}
+    <ion-card-content *ngIf="selectedExpense">
+      <h2>{{ selectedExpense.title }}</h2>
+      <p>{{ selectedExpense.amount }}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>
