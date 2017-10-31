@@ -17,7 +17,17 @@ import { DataProvider } from '../../providers/data/data';
 })
 export class ListExpensePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+	public expenses = [];	
+
+  	constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage, public dataService : DataProvider) {
+  		this.dataService.getData().then((expenses) => {
+ 
+	      if(expenses){
+	        this.expenses = expenses;
+	        console.log('saved expenses');
+	        console.log(expenses);
+	      }
+	    });
   }
 
   ionViewDidLoad() {

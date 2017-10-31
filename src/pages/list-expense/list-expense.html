@@ -10,9 +10,9 @@
 </ion-header>
 
 <ion-content padding>
-  	<ion-list inset>
+  	<ion-list>
 	  <button ion-item *ngFor="let expense of expenses" (click)="expenseSelected(expense)">
-	    {{ expense }}
+	    {{ expense.title }} 
 	  </button> 
 	</ion-list>
 </ion-content>

@@ -18,16 +18,10 @@ import { DataProvider } from '../../providers/data/data';
 export class AddExpensePage {
 
   public expenses = [];
+  title: string;
+  amount: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,  public storage: Storage, public dataService : DataProvider) {
-    this.dataService.getData().then((expenses) => {
- 
-      if(expenses){
-        this.expenses = expenses;
-        console.log('saved expenses');
-        console.log(expenses);
-      }
-    });
   }
 
   saveExpense() {
