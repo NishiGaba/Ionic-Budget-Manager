@@ -19,7 +19,7 @@ export class AddExpensePage {
 
   public expenses = [];
   title: string;
-  amount: string;
+  amount: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,  public storage: Storage, public dataService : DataProvider) {
   }
