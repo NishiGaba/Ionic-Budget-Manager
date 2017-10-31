@@ -10,5 +10,16 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Add Expense view page</h3>
+  <form (ngSubmit)="saveExpense()">
+      <ion-item>
+        <ion-label>Title</ion-label>
+        <ion-input type="text" [(ngModel)]="title" name="title"></ion-input>
+      </ion-item>
+     <ion-item>
+        <ion-label>Amount</ion-label>
+        <ion-input type="text" [(ngModel)]="amount" name="amount"></ion-input>
+      </ion-item>
+      <br>
+      <button ion-button type="submit" block>Add Expense</button>
+    </form>
 </ion-content>
