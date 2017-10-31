@@ -7,16 +7,19 @@ import { MyApp } from './app.component';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { AddExpensePage } from '../pages/add-expense/add-expense';
 import { ListExpensePage } from '../pages/list-expense/list-expense';
+import { UpdateExpensePage } from '../pages/update-expense/update-expense';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { DataProvider } from '../providers/data/data';
 
 @NgModule({
   declarations: [
     MyApp,
     DashboardPage,
     AddExpensePage,
-    ListExpensePage
+    ListExpensePage,
+    UpdateExpensePage
   ],
   imports: [
     BrowserModule,
@@ -28,12 +31,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     DashboardPage,
     AddExpensePage,
-    ListExpensePage
+    ListExpensePage,
+    UpdateExpensePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataProvider
   ]
 })
 export class AppModule {}

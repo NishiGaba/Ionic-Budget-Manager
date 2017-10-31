@@ -15,11 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class UpdateExpensePage {
 
+	title;
+	amount;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UpdateExpensePage');
+    this.title = this.navParams.get('expense').title;
+    this.amount = this.navParams.get('expense').amount;
   }
 
 }
