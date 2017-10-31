@@ -19,6 +19,9 @@ export class AddExpensePage {
   constructor(public navCtrl: NavController, public navParams: NavParams,  public storage: Storage) {
   }
 
+
+  public expenses = [];
+
   saveExpense() {
 
   	console.log(this.title, this.amount);
@@ -27,12 +30,11 @@ export class AddExpensePage {
   		amount: this.amount
   	};
 
-  	// new Storage().set("key","value");
+  	
   	this.storage.set('name', newExpense.title);
 
-  	 this.storage.get('name').then((val) => {
-    console.log('Your name is', val);
-  });
+  	this.expenses.push(newExpense);
+  	console.log(this.expenses);
 
   }
 
