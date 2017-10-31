@@ -12,6 +12,7 @@ import { UpdateExpensePage } from '../pages/update-expense/update-expense';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DataProvider } from '../providers/data/data';
+import { Chart } from 'chart.js';
 
 @NgModule({
   declarations: [

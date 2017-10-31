@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="secondary">
     <ion-title>dashboard</ion-title>
   </ion-navbar>
 
@@ -28,6 +28,12 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Dashboard view page</h3>
-  <p>{{ countExpense }}</p>
+  <ion-card>
+    <ion-card-header>
+      Doughnut Chart
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #doughnutCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
