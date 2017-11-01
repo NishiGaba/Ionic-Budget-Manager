@@ -18,6 +18,7 @@ import { DataProvider } from '../../providers/data/data';
 export class AddExpensePage {
 
   public expenses = [];
+  id: string;
   title: string;
   amount: number;
 
@@ -26,8 +27,11 @@ export class AddExpensePage {
 
   saveExpense() {
 
+    this.id = Math.random().toString(16).slice(2);
+
   	let newExpense = {
-  		title: this.title,
+      id    : this.id,
+  		title : this.title,
   		amount: this.amount
   	};
 

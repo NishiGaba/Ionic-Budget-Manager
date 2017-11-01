@@ -12,8 +12,16 @@
 <ion-content padding>
   <ion-card>
     <ion-card-content *ngIf="selectedExpense">
-      <h2>{{ selectedExpense.title }}</h2>
-      <p>{{ selectedExpense.amount }}</p>
+      <ion-row>
+        <ion-col col-10>
+          <h2>{{ selectedExpense.title }}</h2>
+          <p>{{ selectedExpense.amount }}</p>
+        </ion-col>
+        <ion-col col-2>
+          <ion-icon name="create" (click)="updateExpense($event, selectedExpense)"></ion-icon>
+          <ion-icon name="trash" (click)="deleteExpense($event, selectedExpense)"></ion-icon>
+        </ion-col>
+      </ion-row>
     </ion-card-content>
   </ion-card>
 </ion-content>
